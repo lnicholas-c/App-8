@@ -1,4 +1,5 @@
 library(shiny)
+library(shinydashboard)
 
 motorVehicleDeaths <- read.csv("Motor_Vehicle_Occupant_Death_Rate__by_Age_and_Gender__2012___2014__All_States.csv")
 motorVehicleDeaths <- motorVehicleDeaths[2:53, ]
@@ -73,7 +74,7 @@ server <- function( input, output ){
     plot( motorVehicleDeaths$All.Ages..2012, motorVehicleDeaths$All.Ages..2014,
           xlab = "Deaths Among All Ages: 2012", ylab = "Deaths Among All Ages: 2014", 
           main = "All Ages: 2012 vs. 2014")
-    abline(lm(motorVehicleDeaths$All.Ages..2014~motorVehicleDeaths$All.Ages..2012), col = "blue")
+    abline(lm(motorVehicleDeaths$All.Ages..2014~motorVehicleDeaths$All.Ages..2012), col = "aquamarine3")
     
   })
   
@@ -81,7 +82,7 @@ server <- function( input, output ){
     plot( motorVehicleDeaths$Age.0.20..2012, motorVehicleDeaths$Age.0.20..2014,
           xlab = "Deaths Among People Ages 0-20: 2012", ylab = "Deaths Among People Ages 0-20: 2014", 
           main = "Ages 0 - 20: 2012 vs. 2014")
-    abline(lm(motorVehicleDeaths$Age.0.20..2014~motorVehicleDeaths$Age.0.20..2012), col = "blue")
+    abline(lm(motorVehicleDeaths$Age.0.20..2014~motorVehicleDeaths$Age.0.20..2012), col = "seagreen")
     
   })
   
@@ -89,7 +90,7 @@ server <- function( input, output ){
     plot( motorVehicleDeaths$Age.21.34..2012, motorVehicleDeaths$Age.21.34..2014,
           xlab = "Deaths Among People Ages 21-34: 2012", ylab = "Deaths Among People Ages 21-34: 2014", 
           main = "Ages 21 - 34: 2012 vs. 2014")
-    abline(lm(motorVehicleDeaths$Age.21.34..2014~motorVehicleDeaths$Age.21.34..2012), col = "blue")
+    abline(lm(motorVehicleDeaths$Age.21.34..2014~motorVehicleDeaths$Age.21.34..2012), col = "plum4")
     
   })
   
@@ -97,7 +98,7 @@ server <- function( input, output ){
     plot( motorVehicleDeaths$Age.35.54..2012, motorVehicleDeaths$Age.35.54..2014,
           xlab = "Deaths Among People Ages 35-54: 2012", ylab = "Deaths Among People Ages 35-54: 2014", 
           main = "Ages 35 - 54: 2012 vs. 2014")
-    abline(lm(motorVehicleDeaths$Age.35.54..2014~motorVehicleDeaths$Age.35.54..2012), col = "blue")
+    abline(lm(motorVehicleDeaths$Age.35.54..2014~motorVehicleDeaths$Age.35.54..2012), col = "steelblue")
     
   })
   
@@ -105,7 +106,7 @@ server <- function( input, output ){
     plot( motorVehicleDeaths$Age.55...2012, motorVehicleDeaths$Age.55...2014,
           xlab = "Deaths Among People Ages 55 And Older: 2012", ylab = "Deaths Among People Ages 55 And Older: 2014", 
           main = "Ages 55 And Odler: 2012 vs. 2014")
-    abline(lm(motorVehicleDeaths$Age.55...2014~motorVehicleDeaths$Age.55...2012), col = "blue")
+    abline(lm(motorVehicleDeaths$Age.55...2014~motorVehicleDeaths$Age.55...2012), col = "tomato2")
     
   })
   
